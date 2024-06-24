@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page d'acceil</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            font-family: 'Tw Cen MT', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(parfum1.jpeg);
+            background-size: cover;
+            padding: 0 8%;
+        }
+
+        .container nav p {
+            font-size: 40px;
+            color: #fff;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 5px 0;
+        }
+
+        nav .p {
+            font-style: italic;
+            color: #fff;
+        }
+
+        nav .cart {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            flex: 1;
+            padding-right: 40px;
+            text-align: right;
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-right: 10px;
+        }
+
+        ul li a {
+            position: relative;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            transform: translateX(-50%, -5px);
+            height: 3px;
+            background: #ffa400;
+            transition: 0.3s;
+        }
+
+        ul li a:hover::after {
+            width: 38%;
+        }
+
+        .site-container {
+            position: absolute;
+            bottom: 10%;
+            color: #fff;
+        }
+
+        .site-container p {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .site-container h1 {
+            font-size: 120px;
+            line-height: 120px;
+            margin-left: -10px;
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            background: url(patern.png);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: animate 5s linear 2s infinite alternate;
+        }
+
+        @keyframes animate {
+            100% {
+                background-position: -500px 0;
+            }
+        }
+
+        .site-container h3 {
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .site-container .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .row a {
+            display: flex;
+            align-items: center;
+            padding: 5px 20px;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            margin-right: 40px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .row a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .row a span {
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 2;
+            margin-left: 10px;
+        }
+
+        .row span {
+            font-size: 18px;
+        }
+
+        .social-icons {
+            position: absolute;
+            right: 5%;
+            bottom: 8%;
+        }
+
+        .social-icons a {
+            padding: 5px;
+            margin-right: 4px;
+        }
+
+        .lesimages h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 40px;
+            font-style: italic;
+            color: black;
+        }
+
+        .images-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .image-box img {
+            width: 70%;
+        }
+
+        .image-box p {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .icons {
+            margin-left: 1460px;
+            margin-top: -250px;
+        }
+
+        .imagebas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagebas img {
+            width: 30%;
+            margin-top: 250px;
+        }
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
+            max-width: 50%;
+        }
+
+        .text-section h1 {
+            font-size: 30px;
+            font-style: italic;
+            color: black;
+            text-decoration: none;
+        }
+
+        .text-section p {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+        }
+        table {
+            width: 100%;
+            margin-top: 50px;
+            border-spacing: 0;
+        }
+
+        table td {
+            padding: 20px;
+            vertical-align: top;
+        }
+
+        table td.separator {
+            border-left: 1px solid #ddd;
+        }
+
+        .imagebas1 {
+            display: flex;
+            justify-content: space-between; /* Pour aligner les sections à gauche, au centre et à droite */
+            align-items: flex-start; /* Pour aligner les éléments du haut */
+            margin-top: 50px; /* Ajustement du margin-top pour l'espace */
+            margin-bottom: 50px; /* Ajustement du margin-bottom pour l'espace */
+        }
+
+        .text-section1 {
+            flex: 1; /* Pour occuper tout l'espace restant à gauche */
+            padding-right: 20px; /* Espacement intérieur à droite */
+        }
+
+        .center-column1 {
+            flex: 1; /* Pour occuper tout l'espace disponible au centre */
+            display: flex;
+            justify-content: center; /* Pour centrer l'image horizontalement */
+            align-items: center; /* Pour centrer l'image verticalement */
+        }
+        .center-column1 img {
+            margin-top: 150px;
+        }
+
+        .right-column1 {
+            margin-top: 90px;
+            margin-right: 50px;
+        }
+        .right-column1 h1 {
+            font-style: italic;
+            font-size: 50px;
+        }
+        .right-column1 a {
+            font-size: 18px;
+            border: 1px solid black;
+            padding: 5px 10px;
+        }
+        .image-box  {
+            margin-left: 10px;
+        }
+        .text-section1 {
+            margin-left: 10px;
+        }
+        .video-form-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        .video-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            margin-left: 10px;
+        }
+
+        .form-container {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container form input,
+        .form-container form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            width: 550px;
+            border:1px solid black
+        }
+
+        .form-container form button {
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ffa400;
+            border: none;
+            border-radius: 1px solid #ffa400;
+            width: 550px;
+            cursor: pointer;
+        }
+
+        .form-container form button:hover {
+            background-color: #ff8000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <!--<img src="wanen_white.png" class ="logo" alt="">-->
+            <p>Parfums des Comores</p>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Visiter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="cart.png" class="cart" alt="">
+        </nav>
+        <div class="site-container">
+            <p>Bienvenu au</p>
+            <h1>COMORES</h1>
+            <h3>Venez profiter du calme de chez nous ......!</h3>
+            <div class="row">
+                <a href="#">Prendre un rendez-vous</a>
+                <a href="#">Voir les sites<span>&#x27f6</span></a>
+                <span>
+                    Découvrez la beauté tranquille de la nature.<br> Laissez-vous transporter par des paysages apaisants.
+                </span>
+            </div>
+        </div>
+        <footer>
+            <div class="social-icons">
+                <a href="#"><img src="github-fill.png" alt=""></a>
+                <a href="#"><img src="instagram-fill.png" alt=""></a>
+                <a href="#"><img src="telegram-fill.png" alt=""></a>
+                <a href="#"><img src="drive-fill (1).png" alt=""></a>
+                <a href="#"><img src="phone-fill.png" alt=""></a>
+            </div>
+        </footer>
+    </div>
+    <section class="lesimages">
+        <h1>Parfums des Comores</h1>
+        <div class="images-section">
+            <div class="image-box">
+                <img src="beauté_comorien.png" alt="Description de l'image 1">
+                <p>Beauté naturelle des Comores</p>
+            </div>
+            <div class="image-box">
+                <img src="tradition.png" alt="Description de l'image 2">
+                <p>Culture et traditions</p>
+            </div>
+            <div class="image-box">
+                <img src="paysage1.png" alt="Description de l'image 3">
+                <p>Paysages apaisants</p>
+            </div>
+        </div>
+        <div class="icons">
+            <ion-icon name="arrow-forward-circle-outline" style="font-size: 30px;"></ion-icon>
+        </div>
+    </section>
+    <div class="imagebas">
+        <img src="parfums.png" alt="Image Parfums">
+        <div class="text-section">
+            <h1>Votre guide ultime</h1>
+            <br><br>
+            <p>
+                Plongez au cœur des Comores, un archipel de trésors naturels, culturels et olfactifs. À travers notre site, nous vous invitons à découvrir la beauté intacte et les charmes uniques de nos îles.
+            </p>
+            <p>
+                Les Comores, avec leurs plages immaculées, leurs forêts luxuriantes et leurs traditions riches, sont une destination idéale pour les aventuriers et les amoureux de la nature. Explorez nos paysages époustouflants, de nos montagnes verdoyantes à nos récifs coralliens vibrants. Plongez dans nos eaux cristallines, imprégnez-vous de la sérénité de nos villages, et laissez-vous envoûter par les parfums exotiques de notre flore unique.
+            </p>
+            <p>
+                Notre site, Parfums des Comores, est votre guide pour une aventure inoubliable. Nous vous offrons un aperçu des merveilles à découvrir, des expériences à vivre, et des souvenirs à créer. Chaque coin des Comores a une histoire à raconter, chaque sentier vous mène à une nouvelle découverte.
+            </p>
+            <p>
+                Venez vivre la magie des Comores. Planifiez votre voyage avec nous et laissez-nous vous montrer pourquoi notre archipel est un joyau caché de l'océan Indien. Préparez-vous à tomber amoureux de nos îles parfumées et à emporter avec vous des souvenirs qui dureront toute une vie.
+            </p>
+
+            <table>
+                <tr>
+                    <td>
+                        <h2 id="text">Durée <ion-icon name="timer-outline"></ion-icon></h2>
+                        <p id="text"><a href="#">Flexible, selon vos envies</a></p>
+                    </td>
+                    <td class="separator">
+                        <h2 id="titre2">Expérience <a href="#"><ion-icon name="briefcase-outline"></ion-icon></a></h2>
+                        <p id="text"><a href="#">Plongée, Randonnée, Culture, Gastronomie</a></p>
+                    </td>
+                    <td class="separator">
+                        <h2 id="titre3">Localisation <ion-icon name="location-outline"></ion-icon></h2>
+                        <p id="text"><a href="#">Archipel des Comores, Océan Indien</a></p>
+                    </td>
+                </tr>
+            </table>
+            <br><br><br><br>
+        </div>
+        </div>
+
+        <div class="imagebas1">
+            <!--<div class="text-section1">
+                <h1>Explorez la Beauté Naturelle</h1>
+                <p>Plongez au cœur des Comores et découvrez une biodiversité exceptionnelle qui ne cesse de surprendre.</p>
+                <p>Des forêts luxuriantes où se cachent des cascades majestueuses, aux volcans endormis offrant des vues panoramiques à couper le souffle,</p>
+                <p>chaque coin de l'archipel révèle un nouvel émerveillement.</p>
+                <p>Les passionnés de nature peuvent explorer des sentiers de randonnée qui serpentent à travers des jungles verdoyantes et des plantations de vanille et d'ylang-ylang,</p>
+                <p>offrant une immersion totale dans la beauté naturelle des Comores.</p>
+                <p>...</p>
+                <p>...</p>
+            </div>-->
+            <div class="center-column1">
+                <img src="flower.png" alt="Description de votre image">
+            </div>
+            <div class="right-column1">
+                <h1>Parfums Envoûtants de l'Ylang-Ylang</h1>
+                <br><br>
+                <p>L'ylang-ylang, fleur emblématique des Comores, est au cœur de l'industrie du parfum dans le monde entier.</p>
+                <p>Réputé pour son parfum suave et floral, l'ylang-ylang est une essence prisée utilisée dans la fabrication de parfums de luxe.</p>
+                <p>À travers nos visites guidées, vous pourrez non seulement admirer les plantations d'ylang-ylang en pleine floraison,</p>
+                <p>mais aussi apprendre le processus artisanal de la distillation qui donne naissance à cette fragrance exquise.</p>
+                <br>
+                <a href="#">voir plus</a>
+                <br><br>
+                <h1>Planifiez Votre Aventure aux Comores</h1>
+                <br><br>
+                <p>Que vous soyez à la recherche d'aventure, de détente ou d'une immersion culturelle, les Comores sont une destination idéale pour tous les voyageurs.</p>
+                <p>Explorez nos offres de séjours sur mesure et laissez-nous vous guider dans la planification de votre voyage aux Comores. </p>
+                <p>Chaque visite est une invitation à découvrir la magie des îles parfumées de l'océan Indien et à créer des souvenirs qui dureront toute une vie.</p>
+                <br>
+                <a href="#">voir plus</a>
+                <br><br>
+                <h1>Explorez la Beauté Naturelle</h1>
+                <br><br>
+                <p>Plongez au cœur des Comores et découvrez une biodiversité exceptionnelle qui ne cesse de surprendre. </p>
+                <p>Des forêts luxuriantes où se cachent des cascades majestueuses, aux volcans endormis offrant des vues panoramiques à couper le souffle,</p>
+                <p>chaque coin de l'archipel révèle un nouvel émerveillement. </p>
+                <p>Les passionnés de nature peuvent explorer des sentiers de randonnée qui serpentent à travers des jungles verdoyantes et des plantations de vanille et d'ylang-ylang,</p>
+                <p>offrant une immersion totale dans la beauté naturelle des Comores.</p>
+                <br>
+                <a href="#">voir plus</a>
+            </div>
+        </div>
+
+        <div class="lesimages">
+            <h1>Des sites pour les visiteurs</h1>
+            <div class="images-section">
+                <div class="image-box">
+                    <img src="plage.jpeg" alt="">
+                    <p>Nos magnifiques plages de l'île, sable fin et eaux turquoises. Les plages des Comores vous attendent pour des moments de détente inoubliables.</p>
+                </div>
+                <div class="image-box">
+                    <img src="volcan.jpeg" alt="">
+                    <p>Explorez la majesté du Volcan Karthala. Un voyage unique et spectaculaire pour les amateurs de randonnées et de paysages à couper le souffle.</p>
+                </div>
+                <div class="image-box">
+                    <img src="iles.jpeg" alt="">
+                    <p>Partez à la découverte des îles environnantes. Chaque île des Comores possède son charme distinct et des aventures uniques à offrir.</p>
+                </div>
+            </div>
+            <div class="icons">
+                <a href="#"><img src="facebook-fill.png" alt=""></a>
+                <a href="#"><img src="twitter-fill.png" alt=""></a>
+                <a href="#"><img src="instagram-fill.png" alt=""></a>
+            </div>
+        </div>
+        <div class="imagebas">
+            <img src="site.jpeg" alt="">
+        </div>
+        <div class="imagebas1">
+            <div class="text-section1">
+                <h1>Expériences Culturelles</h1>
+                <p>Plongez dans la riche culture des Comores. De la cuisine locale aux traditions ancestrales, chaque moment est une découverte.</p>
+            </div>
+            <div class="center-column1">
+                <img src="culture.jpeg" alt="">
+            </div>
+            <div class="right-column1">
+                <h1>Planifiez votre visite</h1>
+                <a href="#">Contactez-nous<span>&#x27f6</span></a>
+            </div>
+        </div>
+        <div class="video-form-section">
+            <div class="video-container">
+                <video controls>
+                </video>
+            </div>
+            <div class="form-container">
+                <form>
+                    <input type="text" name="first_name" placeholder="Prénom">
+                    <input type="text" name="last_name" placeholder="Nom">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

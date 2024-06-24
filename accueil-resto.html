@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfums des Comores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 20px; /* Réduire un peu le padding pour un header plus compact */
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000; /* Assurer que le header est au-dessus du reste du contenu */
+        }
+
+        .top-left p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-list li {
+            font-size: 16px;
+            margin-left: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .leh1 h1 {
+            margin-top: 100px;
+            margin-left: 500px;
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        .details {
+            margin-left: 200px;
+            margin-top: 10px;
+        }
+
+        .details span {
+            margin-right: 10px;
+        }
+
+        .details .tools {
+            margin-left: 10px;
+        }
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px;
+        }
+
+        .text {
+            max-width: 600px;
+            margin-left: 180px;
+        }
+
+        .text a {
+            border: 1px solid #8B4513;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .image {
+            margin-right: -150px;
+        }
+
+        .image img {
+            border: 1px solid black;
+            margin-top: -90px;
+            margin-left: 150px;
+            width: 60%;
+            height: 250px;
+        }
+
+        .icons {
+            margin-left: 1450px;
+            margin-top: -250px;
+            cursor: pointer;
+        }
+
+        #text {
+            margin-left: 200px;
+            text-decoration: none;
+        }
+
+        #titre2 {
+            margin-left: 200px;
+            text-decoration: none;
+        }
+
+        #titre3 {
+            margin-left: 200px;
+        }
+
+        #titre3 a {
+            text-decoration: none;
+        }
+
+        #titre2 a {
+            text-decoration: none;
+        } 
+
+        #text a {
+            text-decoration: none;
+        }
+
+        .icon {
+            /*display: flex;
+            gap: 15px;*/
+            margin-top: -650px;
+            /*margin-left: 1195px;*/
+            list-style-type: none;
+        }
+
+        .icon a {
+            color: #000;
+            transition: color 0.3s ease;
+        }
+
+        .icon a:hover {
+            color: #8B4513; /* Chocolat */
+        }
+
+        table {
+            width: 100%;
+            margin-top: 50px;
+            border-spacing: 0;
+        }
+
+        table td {
+            padding: 20px;
+            vertical-align: top;
+        }
+
+        table td.separator {
+            border-left: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-left">
+            <p>Halima Ismael</p>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Présentation</a></li>
+                <li><a href="#copetance">Compétances</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="leh1">
+        <h1>Forum</h1>
+    </div>
+    <br><br><br>
+    <div class="details">
+        <span>Date: Juin 2024<!--</span><span>|</span><span class="tools">Les languages: HTML, CSS et JavaScript</span>-->
+    </div>
+    <div class="content">
+        <div class="text">
+            <p>Bienvenue au Restaurant Le Forum, où chaque plat est une symphonie de saveurs exquises. Découvrez notre menu raffiné, inspiré par les saisons et les ingrédients locaux. De l'élégance de notre salle à manger à l'intimité de notre terrasse en plein air, chaque visite est une expérience gastronomique inoubliable. Que ce soit pour un dîner romantique, un déjeuner d'affaires ou un brunch décontracté entre amis, laissez-vous séduire par notre cuisine créative et notre service chaleureux. Réservez dès aujourd'hui et laissez-nous éveiller vos papilles à de nouvelles sensations culinaires.</p><br><br>
+                <a href="#">Lien vers le site</a>
+            </div>
+            <div class="image">
+                <img id="main-image" src="pro20-resto.png" alt="Image des Comores">
+            </div>
+        </div>
+        <div class="icons">
+            <ion-icon name="arrow-forward-circle-outline" style="font-size: 30px;" onclick="changeImage()"></ion-icon>
+        </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    
+        <table>
+            <tr>
+                <td>
+                    <h2 id="text">Durée <ion-icon name="timer-outline"></ion-icon></h2>
+                    <p id="text"><a href="#">X mois </a></p>
+                <td class="separator">
+                    <h2 id="titre2">Expérience <a href="#"><ion-icon name="briefcase-outline"></ion-icon></h2>
+                    <p id="text"><a href="#">X Y Z ... Expérience</a></p>
+                </td>
+                <td class="separator">
+                    <h2 id="titre3">Localisation <ion-icon name="location-outline"></ion-icon></h2>
+                    <p id="text"><a href="#">2 Avenue Rosa Parks</a></p>
+                </td>
+            </tr>
+        </table>
+        <ul class="icon">
+            <li><a href="#"><ion-icon name="logo-github" style="font-size: 30px;" ></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin" style="font-size: 30px;"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter" style="font-size: 30px;"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-facebook" style="font-size: 30px;"></ion-icon></a></li>
+        </ul>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            var images = ['pro24-resto.png', 'pro25-resto.png','pro26-resto.png', 'pro20-resto.png']; // Liste des chemins des images à afficher
+            var currentImageIndex = 0;
+
+            function changeImage() {
+                var image = document.getElementById('main-image');
+                currentImageIndex = (currentImageIndex + 1) % images.length; // Passe à l'image suivante dans la liste
+                image.src = images[currentImageIndex];
+            }
+        </script>
+    </body>
+</html>
