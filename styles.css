@@ -4,6 +4,49 @@ body {
 }
 
 header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures the header is above other content */
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.left-nav {
+    justify-content: flex-start;
+    margin-left: 15px;
+}
+.right-nav {
+    justify-content: flex-end;
+    margin-left: 15px;
+}
+.nav-list li {
+    margin: 0 15px;
+}
+.nav-list li a {
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+    font-size: 20px;
+}
+.nav-image img {
+    width: 150px;
+    height: auto;
+}
+
+/*header {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,10 +55,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 20px; /* Réduire un peu le padding pour un header plus compact */
-    background-color: #f8f8f8;
+    /*background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
     z-index: 1000; /* Assurer que le header est au-dessus du reste du contenu */
-}
+/*}
 
 .top-left p {
     margin: 0;
@@ -45,7 +88,7 @@ nav {
 .nav-list li a {
     text-decoration: none;
     color: #000;
-}
+}*/
 
 main {
     display: flex;
